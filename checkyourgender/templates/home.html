@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>{{ title }}</title>
+	</head>
+	<body>
+		{% if form %}
+		<form method="post">
+			<table>
+				{{ form.as_table }}
+			</table>
+				<input type="submit" value="Submit" />
+			{% csrf_token %}
+		</form>
+		{% endif %}
+		{% if name %}
+		The gender of {{ name }} is  {{ gender }}
+		{% endif %}
+	</body>
+</html>
